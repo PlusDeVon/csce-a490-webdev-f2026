@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CourseHub | Contact</title>
+    <link rel="stylesheet" href="csss/style.css" />
   </head>
   <body>
     <header class="site-header">
@@ -21,10 +22,29 @@
     </nav>
     <main class="container">
       <section aria-labelledby="contact-heading">
-        <h2 id="contact-heading">Contact and help</h2>
-        <p>
-          The help-request form is added during next class.
-        </p>
+        <h2 id="contact-heading">Request help</h2>
+        <form action="" method="get">
+          <fieldset>
+            <legend>Student information</legend>
+            <label for="student-name">Name</label>
+            <input
+              id="student-name"
+              name="student_name"
+              type="text"
+              autocomplete="name"
+              required
+            />
+            <label for="student-email">Email</label>
+            <input
+              id="student-email"
+              name="student_email"
+              type="email"
+              autocomplete="email"
+              required
+            />
+          </fieldset>
+          <!--START REST OF FORM HERE-->
+        </form>
       </section>
     </main>
     <footer class="site-footer">
