@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeVon's Portfolio | Contact</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header>
-        <!-- <p>CSCE A490</p>  testing out making comments here-->
-        <h1>DeVon's Contact Information</h1>
-        <p>Feel free to reach out to me using the information below.</p>
+    <header class="site_header">
+        <div class="container">
+            <!-- <p>CSCE A490</p>  testing out making comments here-->
+            <h1 class="site_title">DeVon's Contact Information</h1>
+            <p>Feel free to reach out to me using the information below.</p>
+        </div>
     </header>
-    <nav>
+    <nav class="site_nav">
+        <div class="container">
         <a href="index.html">Home</a>
         <a href="education.html">Education</a>
         <a href="awards.html">Awards</a>
@@ -19,10 +23,13 @@
         <a href="projects.html">Projects</a>
         <a href="skills.html">Skills</a>
         <a href="contact.html">Contact</a>
+        </div>
     </nav>
-    <main>
+    <main class="container">
         <section>
-            <table cellpadding="6" width="800" border="1">
+
+            <!--also add a image folder and insert my picture-->
+            <table cellpadding="6" width="400" border="1">
                 <tr>
                     <th>Contact Method</th>
                     <th>Details</th>
@@ -44,22 +51,29 @@
         <section>
             <h2>Contact Directly here</h2>
             <form>
+                <fieldset>
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required><br><br>
 
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required><br><br>
 
+                </fieldset>
+                <!--add a line to add phone number and require email or phone to be required when submiting--> 
+
+                <fieldset>
                 <label for="message">Message:</label><br>
                 <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
 
                 <input type="submit" value="Submit">
-
+                </fieldset>
             </form>
         </section>
     </main>
-    <footer>
+    <footer class="site_footer">
+        <div class="container">
         <p>&copy: 2026 DeVon's Portfolio</p>
+        </div>
     </footer>
     <script>
         console.log("The contact webpage has loaded")
