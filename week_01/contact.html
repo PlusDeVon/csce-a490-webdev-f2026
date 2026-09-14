@@ -52,15 +52,35 @@
             <h2>Contact Directly here</h2>
             <form>
                 <fieldset>
-                <label for="name">Name:</label>
+                <label for="name">Your Name/Company:</label>
                 <input type="text" id="name" name="name" required><br><br>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br><br>
+                <!--contact method checkboxes, Made with AI, but understand how they work-->
+                <div class="contact_method">
+                    <div class="contact_option">
+                        <label for="email_entry">
+                            <input type="checkbox" id="email_entry" value="email" name="contact-method">
+                            Email
+                        </label>
+                        <div id="email_details" class="contact_details" hidden>
+                            <label for="email">Email address:</label>
+                            <textarea id="email" name="email" type="email"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="contact_option">
+                        <label for="phone_entry">
+                            <input type="checkbox" id="phone_entry" value="phone" name="contact-method">
+                            Phone
+                        </label>
+                        <div id="phone_details" class="contact_details" hidden>
+                            <label for="phone">Phone number:</label>
+                            <input type="tel" id="phone" name="phone" pattern="[?(][0-9]{3}[?)][?-][?/][?.][0-9]{3}[?-][?/][?.][0-9]{4}" placeholder="(123)456-7890">
+                        </div>
+                    </div>
+                </div>
 
                 </fieldset>
-                <!--add a line to add phone number and require email or phone to be required when submiting--> 
-
                 <fieldset>
                 <label for="message">Message:</label><br>
                 <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
@@ -76,7 +96,24 @@
         </div>
     </footer>
     <script>
-        console.log("The contact webpage has loaded")
+        console.log("The contact webpage has loaded");
+
+        //<!-- the below javascript code was made with AI, dont fully understand it-->
+        const contactOptions = [
+            { checkbox: document.getElementById("email_entry"), details: document.getElementById("email_details"), field: document.getElementById("email") },
+            { checkbox: document.getElementById("phone_entry"), details: document.getElementById("phone_details"), field: document.getElementById("phone") }
+        ];
+
+        contactOptions.forEach(({ checkbox, details, field }) => {
+            checkbox.addEventListener("change", () => {
+                details.hidden = !checkbox.checked;
+                field.required = checkbox.checked;
+
+                if (!checkbox.checked) {
+                    field.value = "";
+                }
+            });
+        });
     </script>
 </body>
 </html>

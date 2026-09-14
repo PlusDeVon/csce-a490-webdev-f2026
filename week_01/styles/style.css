@@ -93,3 +93,22 @@ table {
     border-collapse: collapse;
     margin-block: 1rem;
 }
+.contact_method{
+    display: grid;
+    gap: 0.75rem;
+}
+.contact_option > label{
+    margin-bottom: 0.25rem;
+}
+.contact_option input[type="checkbox"]{
+    width: auto;
+}
+.contact_details{
+    margin-left: 1.5rem;
+}
+
+.card{
+    border: 1px solid #8e3731;
+    padding: 1rem;
+    background-color: #f4f4f4;
+}
