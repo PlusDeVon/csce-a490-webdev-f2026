@@ -11,6 +11,11 @@
     margin-inline: auto;
 } 
 
+.nav_container{
+    width: min(100% - 2rem, 65rem);
+    margin-inline: auto;
+}
+
 body{
     font-family: system-ui, sans-serif;
     margin: 0;
@@ -35,11 +40,14 @@ body{
 
 
 .site_nav{
+    align-items: stretch;
     padding:1rem max(1rem,calc((100%-65rem)/2));
     background-color: #672020;
     display: flex;
-    align-items: center;
+    flex-direction: row;
     gap: 0.75rem;
+    margin-inline: auto;
+
 }
 .site_nav a{
     color: #f4f4f4;
@@ -57,6 +65,14 @@ body{
     text-underline-offset: 0.25rem;
     font-weight: bold;
 }
+
+@media (min-width: 44rem){
+    .site_nav{
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
 
 fieldset{
     margin-block: 1.5rem;
@@ -93,6 +109,27 @@ table {
     border-collapse: collapse;
     margin-block: 1rem;
 }
+
+.card{
+    border: 1px solid #8e3731;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16px), 1fr));
+}
+
+.education_card, .work_card, .award_card, .skill_card{
+    border: 1px solid #8e3731;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    margin-bottom: 1rem;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16px), 1fr));
+    gap: 1rem;
+    
+}
+
 .contact_method{
     display: grid;
     gap: 0.75rem;
@@ -107,8 +144,3 @@ table {
     margin-left: 1.5rem;
 }
 
-.card{
-    border: 1px solid #8e3731;
-    padding: 1rem;
-    background-color: #f4f4f4;
-}
