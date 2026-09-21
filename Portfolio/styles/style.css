@@ -105,7 +105,7 @@ textarea{
 }
 table {
     width: 100%;
-    min-width: 42rem;
+    min-width: 25rem;
     border-collapse: collapse;
     margin-block: 1rem;
 }
