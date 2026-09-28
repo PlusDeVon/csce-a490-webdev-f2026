@@ -13,6 +13,7 @@
             <!-- <p>CSCE A490</p>  testing out making comments here-->
             <h1 class="site_title">DeVon's Contact Information</h1>
             <p>Feel free to reach out to me using the information below.</p>
+            <button class="theme_toggle" id="toggle">Toggle Dark Mode</button>
         </div>
     </header>
     <nav class="site_nav">
@@ -96,25 +97,5 @@
         <p>&copy: 2026 DeVon's Portfolio</p>
         </div>
     </footer>
-    <script>
-        console.log("The contact webpage has loaded");
-
-        //<!-- the below javascript code was made with AI, dont fully understand it-->
-        const contactOptions = [
-            { checkbox: document.getElementById("email_entry"), details: document.getElementById("email_details"), field: document.getElementById("email") },
-            { checkbox: document.getElementById("phone_entry"), details: document.getElementById("phone_details"), field: document.getElementById("phone") }
-        ];
-
-        contactOptions.forEach(({ checkbox, details, field }) => {
-            checkbox.addEventListener("change", () => {
-                details.hidden = !checkbox.checked;
-                field.required = checkbox.checked;
-
-                if (!checkbox.checked) {
-                    field.value = "";
-                }
-            });
-        });
-    </script>
 </body>
-</html>
+</html
